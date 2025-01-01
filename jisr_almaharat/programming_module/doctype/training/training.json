@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-29 00:16:26.958611",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "training_title",
+  "jop_applicant",
+  "training_pattren",
+  "location",
+  "description_of_training",
+  "training_statu",
+  "training_post_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "training_title",
+   "fieldtype": "Data",
+   "label": "Training Title"
+  },
+  {
+   "fieldname": "jop_applicant",
+   "fieldtype": "Link",
+   "label": "Jop Applicant",
+   "options": "User1"
+  },
+  {
+   "fieldname": "training_pattren",
+   "fieldtype": "Select",
+   "label": "Training Pattren",
+   "options": "Field\nOnline"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "description_of_training",
+   "fieldtype": "Text",
+   "label": "Description of Training"
+  },
+  {
+   "fieldname": "training_statu",
+   "fieldtype": "Select",
+   "label": "Training Statu",
+   "options": "Available\nClose"
+  },
+  {
+   "fieldname": "training_post_date",
+   "fieldtype": "Date",
+   "label": "Training Post Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-31 23:16:43.675607",
+ "modified_by": "Administrator",
+ "module": "programming module",
+ "name": "Training",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
