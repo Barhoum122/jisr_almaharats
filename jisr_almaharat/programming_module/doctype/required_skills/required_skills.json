@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-01 22:31:48.900614",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "required_skills_section",
+  "list_of_required",
+  "experience"
+ ],
+ "fields": [
+  {
+   "fieldname": "required_skills_section",
+   "fieldtype": "Section Break",
+   "label": "Required Skills"
+  },
+  {
+   "fieldname": "list_of_required",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "List Of Required",
+   "reqd": 1
+  },
+  {
+   "description": "Year Of Experience",
+   "fieldname": "experience",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Experience"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-01 22:45:58.223873",
+ "modified_by": "Administrator",
+ "module": "programming module",
+ "name": "Required Skills",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

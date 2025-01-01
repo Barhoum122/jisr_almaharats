@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:EXAMPLE-{MM}-{DD}-{#####}",
+ "creation": "2024-12-29 00:19:12.915141",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "applaction_section",
+  "applicant_name",
+  "email",
+  "phone",
+  "job",
+  "training",
+  "cv"
+ ],
+ "fields": [
+  {
+   "fieldname": "applaction_section",
+   "fieldtype": "Section Break",
+   "label": "Applaction"
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Applicant_Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "User1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job",
+   "fieldtype": "Link",
+   "label": "Job",
+   "options": "Job"
+  },
+  {
+   "fieldname": "training",
+   "fieldtype": "Link",
+   "label": "Training",
+   "options": "Training"
+  },
+  {
+   "fieldname": "cv",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "CV",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-01 20:53:54.182703",
+ "modified_by": "Administrator",
+ "module": "programming module",
+ "name": "Application",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

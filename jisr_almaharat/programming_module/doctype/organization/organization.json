@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{organization_name}",
+ "creation": "2024-12-29 00:15:34.315754",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_evag",
+  "amended_from",
+  "organization_name",
+  "email",
+  "phone",
+  "column_break_bqcd",
+  "industry",
+  "registration_date",
+  "logo",
+  "section_break_xrdy",
+  "about_organization",
+  "locations_info_section",
+  "location",
+  "set_location"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_evag",
+   "fieldtype": "Section Break",
+   "label": "Organiztion Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Organization",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organization Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "about_organization",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "About Organization",
+   "placeholder": "Whrit Here About Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Select",
+   "label": "Industry",
+   "options": "Technology\nEducational\nMedical\nMechanic\nArchitectural\nAgricultural",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "set_location",
+   "fieldtype": "Geolocation",
+   "label": "Set Location"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration date"
+  },
+  {
+   "fieldname": "section_break_xrdy",
+   "fieldtype": "Section Break",
+   "label": "Organization"
+  },
+  {
+   "fieldname": "column_break_bqcd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "locations_info_section",
+   "fieldtype": "Section Break",
+   "label": "Locations Info"
+  }
+ ],
+ "image_field": "logo",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-01 23:12:06.922500",
+ "modified_by": "Administrator",
+ "module": "programming module",
+ "name": "Organization",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

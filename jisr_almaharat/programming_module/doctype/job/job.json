@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Pre-.#####",
+ "creation": "2024-12-29 00:16:06.045571",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "jop_informtion_section",
+  "jop_reference_id",
+  "jop_title",
+  "company_name",
+  "salary_range",
+  "education_level",
+  "posting_date",
+  "aplication_deadline",
+  "contact_email",
+  "column_break_krqq",
+  "jop_location",
+  "jop_type",
+  "jop_description",
+  "url_to_applay",
+  "list_of_required_section",
+  "required_skills",
+  "company_logo"
+ ],
+ "fields": [
+  {
+   "fieldname": "jop_informtion_section",
+   "fieldtype": "Section Break",
+   "label": "JOP INFORMTION"
+  },
+  {
+   "fieldname": "jop_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Jop Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jop_reference_id",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "is_virtual": 1,
+   "label": "Jop Reference ID"
+  },
+  {
+   "description": "Name the Company Offered For the Jop",
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Organization",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company_name.location",
+   "fieldname": "jop_location",
+   "fieldtype": "Data",
+   "label": "Jop Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jop_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Jop Type",
+   "options": "Full-time\nPart-time\nFreelance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_range",
+   "fieldtype": "Currency",
+   "label": "Salary Range"
+  },
+  {
+   "fieldname": "education_level",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Education Level",
+   "options": "High School\nMaster`s Degree\nBachelor`s Degree\nPhD",
+   "reqd": 1,
+   "sort_options": 1
+  },
+  {
+   "fieldname": "column_break_krqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jop_description",
+   "fieldtype": "Text",
+   "label": "Jop Description",
+   "placeholder": "Whrit Here all Descrption For Jop"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "aplication_deadline",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Aplication Deadline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "list_of_required_section",
+   "fieldtype": "Section Break",
+   "label": "List Of Required"
+  },
+  {
+   "fieldname": "required_skills",
+   "fieldtype": "Table",
+   "label": "Required Skills",
+   "options": "Required Skills",
+   "reqd": 1
+  },
+  {
+   "fieldname": "url_to_applay",
+   "fieldtype": "Data",
+   "label": "URL To Applay"
+  },
+  {
+   "fetch_from": "company_name.logo",
+   "fieldname": "company_logo",
+   "fieldtype": "Image",
+   "label": "Company Logo",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-01 23:17:31.967331",
+ "modified_by": "Administrator",
+ "module": "programming module",
+ "name": "Job",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
