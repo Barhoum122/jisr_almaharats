@@ -1,0 +1,39 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2025-01-16 01:46:16.175031",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Application",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>workflow state is {{doc.workflow}}</p>\n",
+ "message_type": "Markdown",
+ "modified": "2025-01-16 23:10:18.669047",
+ "modified_by": "Administrator",
+ "module": "programming module",
+ "name": "Application Approved",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "doc.workflow_state=='Approved'",
+   "receiver_by_document_field": "",
+   "receiver_by_role": "Administrator"
+  },
+  {
+   "condition": "doc.workflow_state=='Approval Pending'",
+   "receiver_by_role": "Administrator"
+  },
+  {
+   "condition": "doc.workflow_state=='Approved'",
+   "receiver_by_role": "All"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.workflow_state }}",
+ "value_changed": "workflow_state"
+}

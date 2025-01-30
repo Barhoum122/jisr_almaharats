@@ -1,24 +1,68 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{name1}",
  "creation": "2024-12-29 00:14:41.836297",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_tztg"
+  "create_account_section",
+  "name1",
+  "email",
+  "phone_number",
+  "password",
+  "confirm_password"
  ],
  "fields": [
   {
-   "fieldname": "section_break_tztg",
-   "fieldtype": "Section Break"
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "placeholder": "                                                                                                  @gmail.com",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "create_account_section",
+   "fieldtype": "Section Break",
+   "label": "Create Account"
+  },
+  {
+   "fieldname": "confirm_password",
+   "fieldtype": "Password",
+   "label": "Confirm Password"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-12-29 00:14:41.836297",
+ "links": [
+  {
+   "link_doctype": "Application",
+   "link_fieldname": "applicant_name"
+  }
+ ],
+ "modified": "2025-01-08 00:28:23.873518",
  "modified_by": "Administrator",
  "module": "programming module",
  "name": "User1",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

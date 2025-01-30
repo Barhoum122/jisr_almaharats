@@ -1,0 +1,37 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+{%  set organization = frappe.get_doc("Organization", doc.organization) %}
+
+
+<h1>{{ title }} <span class="badge badge-{{'primary' if doc.training_status== "Available" else 'secondary'}}">{{doc.training_status}}</span> </h1>
+
+<p><strong>Training Application Date</strong></p>
+<p> <li>From  {{training_post_date}} To  <span style="color:red">{{aplication_deadline}}</span></li> </p>
+
+
+<p><strong>Training Kind</strong> : {{training_pattren}}</p>
+
+<p><strong>Trainig Location</strong> {{doc.location}}</p>
+
+
+<p><strong>Training Requireds</strong></p>
+<ul>
+    {% for required in required_skills %}
+        <li>{{required.skill}}</li>
+    {% endfor %}
+</ul>
+
+<p><strong>Training Description</strong></p>
+<p>{{ about_training }}</p>
+
+<h4>Company Name: {{organization.organization_name}}</h4>
+<a href="/trainings" class="btn btn-info">Back</a>
+<!-- <a href="/book-appointment/new?clinc={{doc.name}}" class="btn btn-info">Book Appointment</a> -->
+<a href="/application/new?application_name={{doc.training_title}}&kind=Training" class="btn btn-primary">Application Now</a>
+
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

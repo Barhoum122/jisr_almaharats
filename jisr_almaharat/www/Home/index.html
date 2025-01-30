@@ -1,0 +1,52 @@
+{% extends 'templates/hf_base.html'%}
+{% block content %}
+
+
+<main class="main">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Find A Job That Matches Your Passion</h1>
+          <p data-aos="fade-up" data-aos-delay="100">Hand-Picket opportunitirs to work from .remotely,Freelancer,full
+            time,part time.contract and intership</p>
+          <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+            <a href="#recent-posts" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+              class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
+                class="bi bi-play-circle"></i><span>Watch Videos</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+          <img src="/assets/jisr_almaharat/site_assets/img/home1.avif" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  {% block categres %}
+  {% include 'templates/includes/Popular/categories.html' %}
+  {% endblock %}
+
+
+
+  <!-- /Hero Section -->
+
+  <!-- Here  Section Show all Jobs -->
+  {% block job_card %}
+  {% include 'templates/includes/job/job_card.html' %}
+  {% endblock %}
+  <!-- Here show all Jobs -->
+
+  <!-- Here  Section Show all Training_card -->
+  {% block Training_card %}
+  {% include 'templates/includes/training/training_card.html' %}
+  {% endblock %}
+  <!-- Here show all Training_card -->
+
+</main>
+
+{% endblock %}

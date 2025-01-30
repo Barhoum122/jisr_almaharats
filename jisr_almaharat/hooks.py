@@ -4,11 +4,56 @@ app_publisher = "admin"
 app_description = "site for training and employment"
 app_email = "amaralazi1000@gmail.com"
 app_license = "mit"
+from jisr_almaharat.route import routes
 
 # Apps
 # ------------------
 
 # required_apps = []
+
+###################### Start Fixtures for testing #################
+fixtures = [ 
+#add role  
+    {"doctype": "Role", "filters": [["name", "in", ["Organization Role", "User Role"]]]},
+    {"doctype": "Custom DocPerm", "filters": [["role", "in", ["Organization Role", "User Role"]]]},
+#add Workflow
+    {"doctype": "Workflow", "filters": [["name", "in", ["Approval Organization", "Approval Application"]]]},
+    {"doctype": "Workflow State"},
+    {"doctype": "Workflow Action Master"}
+
+
+]
+#######################        end Fixtures       #################
+
+
+#######################  Start Custom Login       #################
+# import frappe
+# from frappe.auth import LoginManager
+
+# def custom_login(login_manager):
+#     # الحصول على بيانات المستخدم من نموذج تسجيل الدخول
+#     email = frappe.form_dict.get('email')  # البريد الإلكتروني المدخل
+#     password = frappe.form_dict.get('password')  # كلمة المرور المدخلة
+
+#     # البحث في الـ DocType المخصص (Organization)
+#     organization = frappe.get_all(
+#         "Organization",  # اسم الـ DocType المخصص
+#         filters={"email": email},
+#         fields=["name", "password"]
+#     )
+
+#     if organization and organization[0].password == password:
+#         # إذا تم التحقق من المستخدم، قم بتسجيل الدخول
+#         frappe.local.login_manager.user = organization[0].name
+#         frappe.local.login_manager.post_login()
+#     else:
+#         # إذا فشل التحقق، قم برمي خطأ
+#         frappe.throw("Invalid email or password")
+
+# # ربط الوظيفة بـ "login" hook
+# frappe.login = custom_login
+
+#######################  End Custom Login         #################
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -63,7 +108,9 @@ app_license = "mit"
 # role_home_page = {
 # 	"Role": "home_page"
 # }
-
+############## Here line to git file routes
+website_route_rules = routes
+############## Here line to git file routes
 # Generators
 # ----------
 
@@ -166,6 +213,19 @@ app_license = "mit"
 # 	],
 # }
 
+
+
+scheduler_events = {
+ 
+	# "daily": [
+	# 	"jisr_almaharat.tasks.daily"
+	# ],jisr_almaharat/jisr_almaharat/programming_module/doctype/job/job.py"
+	"hourly": [
+		"jisr_almaharat.jisr_almaharat.programming_module.task.update_status"
+	],
+ 
+ 
+}
 # Testing
 # -------
 

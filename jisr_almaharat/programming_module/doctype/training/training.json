@@ -1,64 +1,165 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
+ "autoname": "Training-ID-.#####",
  "creation": "2024-12-29 00:16:26.958611",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "organization_information_section",
+  "organization_name",
+  "organization_site",
+  "column_break_bdsd",
+  "organization_email",
+  "organization_location",
+  "training_information_section",
   "training_title",
-  "jop_applicant",
   "training_pattren",
+  "training_post_date",
+  "column_break_swie",
   "location",
-  "description_of_training",
-  "training_statu",
-  "training_post_date"
+  "training_status",
+  "aplication_deadline",
+  "description_of_training_section",
+  "about_training",
+  "list_of_required_section",
+  "required_skills",
+  "is_published",
+  "route"
  ],
  "fields": [
   {
    "fieldname": "training_title",
    "fieldtype": "Data",
-   "label": "Training Title"
-  },
-  {
-   "fieldname": "jop_applicant",
-   "fieldtype": "Link",
-   "label": "Jop Applicant",
-   "options": "User1"
+   "in_list_view": 1,
+   "label": "Training Title",
+   "reqd": 1
   },
   {
    "fieldname": "training_pattren",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Training Pattren",
-   "options": "Field\nOnline"
+   "options": "Field\nOnline",
+   "reqd": 1
   },
   {
+   "fieldname": "training_post_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Training Post Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_swie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description_of_training_section",
+   "fieldtype": "Section Break",
+   "label": "Description of Training"
+  },
+  {
+   "fetch_from": "company_name.location",
    "fieldname": "location",
    "fieldtype": "Data",
    "label": "Location"
   },
   {
-   "fieldname": "description_of_training",
-   "fieldtype": "Text",
-   "label": "Description of Training"
-  },
-  {
-   "fieldname": "training_statu",
+   "fieldname": "training_status",
    "fieldtype": "Select",
-   "label": "Training Statu",
-   "options": "Available\nClose"
+   "in_list_view": 1,
+   "label": "Training Status",
+   "options": "Available\nClose",
+   "reqd": 1
   },
   {
-   "fieldname": "training_post_date",
+   "fieldname": "aplication_deadline",
    "fieldtype": "Date",
-   "label": "Training Post Date"
+   "label": "Aplication Deadline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "list_of_required_section",
+   "fieldtype": "Section Break",
+   "label": "List Of Required"
+  },
+  {
+   "fieldname": "about_training",
+   "fieldtype": "Text",
+   "label": "About Training",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization_information_section",
+   "fieldtype": "Section Break",
+   "label": "Organization Information"
+  },
+  {
+   "fetch_from": "organization_name.email",
+   "fieldname": "organization_email",
+   "fieldtype": "Data",
+   "label": "Organization Email",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "training_information_section",
+   "fieldtype": "Section Break",
+   "label": "Training Information"
+  },
+  {
+   "fetch_from": "company_name.organization_name",
+   "fieldname": "organization_name",
+   "fieldtype": "Link",
+   "label": "Organization Name",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "column_break_bdsd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "organization_name.website",
+   "fieldname": "organization_site",
+   "fieldtype": "Data",
+   "label": "Organization Site"
+  },
+  {
+   "fetch_from": "organization_name.location",
+   "fieldname": "organization_location",
+   "fieldtype": "Data",
+   "label": "Organization Location"
+  },
+  {
+   "fieldname": "required_skills",
+   "fieldtype": "Table",
+   "label": "Required Skills",
+   "options": "Required Item",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2024-12-31 23:16:43.675607",
+ "modified": "2025-01-25 14:17:39.690293",
  "modified_by": "Administrator",
  "module": "programming module",
  "name": "Training",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -74,7 +175,11 @@
    "write": 1
   }
  ],
+ "route": "trainings",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "training_title",
+ "translated_doctype": 1
 }

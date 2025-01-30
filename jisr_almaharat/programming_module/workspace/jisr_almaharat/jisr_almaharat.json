@@ -1,0 +1,118 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"3BjA4mTPnQ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Jisr Almaharat</span>\",\"col\":12}},{\"id\":\"-OGgezhmRl\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"C_1kkuvKDe\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"x4gdcc7ogo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Site</b></span>\",\"col\":12}},{\"id\":\"3F89RXLW3v\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Home\",\"col\":3}},{\"id\":\"WOj4ELcBHG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Home\",\"col\":3}},{\"id\":\"rZtNi6mF7-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hnYSYobXqM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Add Section</b></span>\",\"col\":12}},{\"id\":\"LEUSyeelro\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Job\",\"col\":3}},{\"id\":\"vsDwOWBCqN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Doctype</b></span>\",\"col\":12}},{\"id\":\"3si5PlDcYf\",\"type\":\"card\",\"data\":{\"card_name\":\"Organization\",\"col\":4}},{\"id\":\"6RM4Ao1Tce\",\"type\":\"card\",\"data\":{\"card_name\":\"Training\",\"col\":4}},{\"id\":\"ZDXmkwUuUH\",\"type\":\"card\",\"data\":{\"card_name\":\"Job\",\"col\":4}},{\"id\":\"_5pKuTdBXF\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"All Organization\",\"col\":4}},{\"id\":\"_6iniVhYxp\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"All Training\",\"col\":4}},{\"id\":\"7nrPp9u3eC\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"All Jobs\",\"col\":4}}]",
+ "creation": "2025-01-24 19:32:07.251384",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-monthly-rank",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Jisr Almaharat",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Organization",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Organization",
+   "link_count": 0,
+   "link_to": "Organization",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job",
+   "link_count": 0,
+   "link_to": "Job",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training",
+   "link_count": 0,
+   "link_to": "Training",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-01-25 19:37:42.498721",
+ "modified_by": "Administrator",
+ "module": "programming module",
+ "name": "Jisr Almaharat",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Organization",
+   "label": "All Organization"
+  },
+  {
+   "document_type": "Job",
+   "label": "All Jobs"
+  },
+  {
+   "document_type": "Training",
+   "label": "All Training"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 40.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Add Job",
+   "type": "URL",
+   "url": "http://127.0.0.1:8000/add-job/new"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Home",
+   "type": "URL",
+   "url": "http://127.0.0.1:8000/Home/index"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "New Home",
+   "type": "URL",
+   "url": "http://127.0.0.1:8000/new-home"
+  }
+ ],
+ "title": "Jisr Almaharat"
+}

@@ -1,0 +1,86 @@
+<!-- Pricing Section -->
+<section id="recent-posts" class="recent-posts section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>New JOBS</h2>
+    <p>Recent posts form our Jobs</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-3">
+      {% for job in Job_info[:3] %}
+      <div class="col-xl-4 col-md-6">
+        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="post-img position-relative overflow-hidden">
+            <img src="/assets/jisr_almaharat/site_assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
+            <span class="post-date">{{job.aplication_deadline}}</span>
+          </div>
+          <div class="post-content d-flex flex-column">
+            <h3 class="post-title">{{job.jop_title}}</h3>
+            <div href="" class="meta d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-people"></i> <span class="ps-2">{{job.organization_name}}</span>
+              </div>
+              <span class="px-3 text-black-50">/</span>
+              <div class="d-flex align-items-center">
+                <i class="bi-play-circle"></i> <span class="ps-2">{{job.jop_type}}</span>
+              </div>
+            </div>
+            <hr>
+            <a href="/Home/jobDetails/{{job.name}}" class="readmore stretched-link"><span>Read More</span><i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- End post item -->
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+  {% if Job_info|length >3 %}
+  <div class="container-xxl py-5" py-5>
+
+    <div class="tab-class text-center wow fadeInUp" data-wow-delay>
+
+      <a class="btn btn-primary py-3 px-5" href="/Home/more_job.html">Browse More Jobs</a>
+    </div>
+  </div>
+
+  {% endif %}
+</section>
+<style>
+  .sticky-apply {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* background: #fff; */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .btn-apply {
+    background: #3498db;
+    /* Blue button */
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .btn-apply:hover {
+    background: #2980b9;
+    /* Darker blue on hover */
+  }
+</style>

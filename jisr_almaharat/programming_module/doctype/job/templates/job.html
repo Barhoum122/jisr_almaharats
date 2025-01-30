@@ -1,0 +1,38 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+{%  set organization = frappe.get_doc("Organization", doc.organization) %}
+
+
+<h1>{{ title }} <span class="badge badge-{{'primary' if doc.status== "Available" else 'secondary'}}">{{doc.status}}</span> </h1>
+
+<p><strong>Job Application Date</strong></p>
+<p> <li>From  {{posting_date}} To  <span style="color:red">{{aplication_deadline}}</span></li> </p>
+
+
+<p><strong>Jop Location</strong> : {{jop_location}}</p>
+
+<p><strong>Time</strong> {{doc.jop_type}}</p>
+
+<p><strong>Salary Range :</strong> {{ salary_range if doc.salary_range != 0 else 'Not Mentioned' }}</p>
+
+<p><strong>Job Requireds</strong></p>
+<ul>
+    {% for required in required_skills %}
+        <li>{{required.skill}}</li>
+    {% endfor %}
+</ul>
+
+<p><strong>Jop Description</strong></p>
+<p>{{ jop_description}}</p>
+
+<h4>Company Name: {{organization.organization_name}}</h4>
+<a href="/jobs" class="btn btn-info">Back</a>
+<!-- <a href="/book-appointment/new?clinc={{doc.name}}" class="btn btn-info">Book Appointment</a> -->
+<a href="/application/new?application_name={{doc.jop_title}}&kind=Job" class="btn btn-primary">Application Now</a>
+
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

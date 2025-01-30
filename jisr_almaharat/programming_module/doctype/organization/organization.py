@@ -4,9 +4,15 @@
 import frappe
 from frappe.model.document import Document
 
+#import the email valion
+from frappe.utils import validate_email_address 
+from frappe import throw
+
 
 class Organization(Document):
-	pass
+	def validate_email(doc,method):
+		if doc.email and not validate_email_address (doc.email):
+			throw("Invail email address.")
 	
 
 	

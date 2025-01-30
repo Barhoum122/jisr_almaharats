@@ -17,9 +17,17 @@ frappe.ui.form.on("Organization", {
         if (!isValid) {
             frappe.throw(__('Name should contain only letters and spaces.'));
         }
+
+
+       
+            // the email validation
+                if (frm.doc.email && ! frappe.utils.validate_type(frm.doc.email,'email')){
+                    frappe.throw('invalid email address');
+                }
+        
     }
 
-
+         
 
     
 });

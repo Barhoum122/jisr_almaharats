@@ -1,70 +1,99 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:EXAMPLE-{MM}-{DD}-{#####}",
+ "autoname": "format:{MM}-{DD}-{#####}",
  "creation": "2024-12-29 00:19:12.915141",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "applaction_section",
+  "applactopm_information",
+  "application_name",
+  "column_break_jgap",
+  "kind",
+  "applicant_information_section",
   "applicant_name",
-  "email",
   "phone",
-  "job",
-  "training",
-  "cv"
+  "email",
+  "cv",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "applaction_section",
-   "fieldtype": "Section Break",
-   "label": "Applaction"
-  },
-  {
-   "fieldname": "applicant_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Applicant_Name",
-   "reqd": 1
-  },
-  {
+   "fetch_from": "applicant_name.email",
    "fieldname": "email",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Email",
    "options": "User1",
    "reqd": 1
   },
   {
+   "fetch_from": "applicant_name.phone_number",
    "fieldname": "phone",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Phone",
+   "options": "User1",
    "reqd": 1
-  },
-  {
-   "fieldname": "job",
-   "fieldtype": "Link",
-   "label": "Job",
-   "options": "Job"
-  },
-  {
-   "fieldname": "training",
-   "fieldtype": "Link",
-   "label": "Training",
-   "options": "Training"
   },
   {
    "fieldname": "cv",
    "fieldtype": "Attach",
    "in_list_view": 1,
-   "label": "CV",
+   "label": "CV"
+  },
+  {
+   "fieldname": "application_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Application_Name",
+   "options": "Job",
    "reqd": 1
+  },
+  {
+   "fieldname": "applactopm_information",
+   "fieldtype": "Section Break",
+   "label": "Applaction Information"
+  },
+  {
+   "fieldname": "column_break_jgap",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kind",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Kind",
+   "options": "Job\nTraining",
+   "reqd": 1
+  },
+  {
+   "fieldname": "applicant_information_section",
+   "fieldtype": "Section Break",
+   "label": "Applicant Information"
+  },
+  {
+   "fetch_from": "email.name1",
+   "fieldname": "applicant_name",
+   "fieldtype": "Link",
+   "label": "Applicant Name",
+   "options": "User1"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Application",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-01-01 20:53:54.182703",
+ "modified": "2025-01-27 19:24:39.424228",
  "modified_by": "Administrator",
  "module": "programming module",
  "name": "Application",
@@ -80,6 +109,27 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Organization Role",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "User Role",
    "share": 1,
    "write": 1
   }
